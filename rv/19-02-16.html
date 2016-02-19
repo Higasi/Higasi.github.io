@@ -33,8 +33,8 @@ document.body.appendChild(renderer.domElement);
   function render(){
     requestAnimationFrame(render);
     
-    cubo.rotation.x+=0.1;
-     cubo.rotation.y+=0.1;
+    cubo.rotation.x+=0.01;
+     cubo.rotation.y+=0.01;
     renderer.render(escena, camara);
   }
   
