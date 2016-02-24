@@ -34,8 +34,8 @@ document.body.appendChild(renderer.domElement);
   
   
   var forma = new THREE.ShapeGeometry(figura) ;
-  var malla=new THREE.MeshDepthMaterial();
-  var esfera = new THREE.Mesh (forma);
+  var malla =new THREE.Mesh(forma);
+ 
   escena.add(malla);
   function loop(){
     requestAnimationFrame(loop);
