@@ -43,7 +43,7 @@ document.body.appendChild(renderer.domElement);
   //para generar la malla hay que desarrollar la forma
   
 
-var forma= new THREE.ExtrudeGeometry ( figura,{amount:1});
+var forma= new THREE.ExtrudeGeometry ( figura,{amount:.5});
 var malla= new THREE.Mesh(forma);
 
 escena.add(malla);
