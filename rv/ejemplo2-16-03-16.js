@@ -12,6 +12,7 @@ LuzPutual.position.z =10;
 
 escena= new THREE.Scene();
 escena.add(malla);
+escena.add(LuzPuntual)
 
 
 camara= new THREE.PerspectiveCamera();
