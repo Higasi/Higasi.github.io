@@ -5,7 +5,10 @@ var forma= new THREE.BoxGeometry (1,4,9);
 var material= new THREE.MeshLambertMaterial({map: textura});
 malla = new THREE.Mesh(forma, material);
 
-var   luzPuntual=new
+var LuzPuntual = new THREE.PointLight(0XFFFFFF);
+LuzPutual.position.x =10;
+LuzPutual.position.y =10;
+LuzPutual.position.z =10;
 
 escena= new THREE.Scene();
 escena.add(malla);
