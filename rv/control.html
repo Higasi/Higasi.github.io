@@ -31,7 +31,7 @@ body {margin:0;}
   controls.lookSpeed=0.05;
   controls.noFly=true;
   controls.lookVertical=false;
-  function renderer(){
+  function render(){
     renderer.render(escena, camara);
     controls.update(clock.getDelta());
     requestAnimationFrame(render);
