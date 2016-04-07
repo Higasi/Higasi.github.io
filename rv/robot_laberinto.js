@@ -51,7 +51,8 @@ Cabeza.prototype=new THREE.Object3D();
 
 //Se procede a definir la funcion de inicializacion del mundo virtual
 function setup(){
-cuerpo=new Cuerpo();
+  var material= new THREE.MeshDepthMaterial();
+cuerpo=new Cuerpo(material);
 piernaD=new Pierna();
 piernaI=new Pierna();
 brazoI=new Brazo();
