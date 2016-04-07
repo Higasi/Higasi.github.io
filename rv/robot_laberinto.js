@@ -1,12 +1,10 @@
 function Pierna(){
 THREE.Object3D.call(this);
 //Mallas para pierna y pie
-var material= new THREE.MeshDepthMaterial();
-var pier=new THREE.BoxGeometry(1,5,1);
-var pata=new THREE.BoxGeometry(2,1,1);
 
-this.pierna=new THREE.Mesh(pier, material);
-this.pie=new THREE.Mesh(pata,material);
+
+this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),new THREE.MeshDepthMaterial());
+this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),new THREE.MeshDepthMaterial());
 
 //Posicion de mallas
 this.pierna.position.y=-2.5;
@@ -100,7 +98,8 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 piernaD.rotation.x +=0.05;
 piernaD.rotation.y +=0.05;
-/*
+
+
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
   piernaD.rotation.z+=step;
@@ -109,7 +108,7 @@ if (Math.abs(piernaD.rotation.z)>.5)
   brazoI.rotation.z+=step;
   brazoD.rotation.z-=step;
 }
-*/
+
 //Se declaran simbolos globales y se ejecuta setup y loop
 var escena,camara,renderer;
 var step, piernaD,piernaI, cuerpo, brazoI, brazoD, cabeza;
