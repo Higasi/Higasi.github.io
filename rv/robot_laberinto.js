@@ -4,7 +4,7 @@ THREE.Object3D.call(this);
 
 
 this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),new THREE.MeshPhongMaterial({color: '#00cc00'}));
-this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),new THREE.MeshDepthMaterial());
+this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),new THREE.MeshPhongMaterial({color: '#00cc00'}));
 
 //Posicion de mallas
 this.pierna.position.y=-2.5;
@@ -103,17 +103,17 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
-piernaD.rotation.x +=0.01;
+piernaD.rotation.y +=0.01;
 
-piernaI.rotation.x +=0.01;
+piernaI.rotation.y +=0.01;
 
-brazoD.rotation.x +=0.01;
+brazoD.rotation.y +=0.01;
 
-brazoI.rotation.x +=0.01;
+brazoI.rotation.y +=0.01;
 
-cuerpo.rotation.x +=0.01;
+cuerpo.rotation.y +=0.01;
 
-cabeza.rotation.x +=0.01;
+cabeza.rotation.y +=0.01;
 
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
