@@ -85,7 +85,8 @@ escena.add(cabeza);
 //Agregamos camara y renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
-cuerpo.rotation.x +=0.05;
+piernaD.rotation.x +=0.05;
+piernaD.rotation.y +=0.05;
 
 renderer =new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
