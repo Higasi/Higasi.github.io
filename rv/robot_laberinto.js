@@ -80,14 +80,14 @@ escena.add(cabeza);
 //Agregamos camara y renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
-camara.position.x=5;
-camara.position.y=10;
+
 renderer =new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
 //Loop
+/*
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
@@ -98,9 +98,9 @@ if (Math.abs(piernaD.rotation.z)>.5)
   brazoI.rotation.z+=step;
   brazoD.rotation.z-=step;
 }
-
+*/
 //Se declaran simbolos globales y se ejecuta setup y loop
 var escena,camara,renderer;
 var step, piernaD,piernaI, cuerpo, brazoI, brazoD, cabeza;
 setup();
-loop();
+//loop();
