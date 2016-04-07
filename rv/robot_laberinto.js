@@ -3,7 +3,7 @@ THREE.Object3D.call(this);
 //Mallas para pierna y pie
 
 
-this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),new THREE.MeshDepthMaterial());
+this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),new THREE.MeshPhongMaterial({color: '#00cc00'}));
 this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),new THREE.MeshDepthMaterial());
 
 //Posicion de mallas
@@ -53,6 +53,13 @@ Cabeza.prototype=new THREE.Object3D();
 
 //Se procede a definir la funcion de inicializacion del mundo virtual
 function setup(){
+  var LuzPuntual = new THREE.PointLight(0XFFFFFF);
+LuzPuntual.position.x =10;
+LuzPuntual.position.y =10;
+LuzPuntual.position.z =10;
+
+
+escena.add(LuzPuntual)
   
 cuerpo=new Cuerpo();
 piernaD=new Pierna();
