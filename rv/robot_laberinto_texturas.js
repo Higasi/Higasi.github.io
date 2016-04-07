@@ -18,7 +18,7 @@ this.add(this.pie);
 
 function Cuerpo(){
 THREE.Object3D.call(this);
-this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10), new THREE.MeshLambertMaterial({color: '#ffffff'}));
+this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10), new THREE.MeshLambertMaterial({color: '#9831DC'}));
 this.cuerpo.position.y=0;
 this.add(this.cuerpo);
 }
@@ -27,8 +27,8 @@ this.add(this.cuerpo);
 function Brazo(){
 THREE.Object3D.call(this);
 //Mallas para pierna y pie
-this.brazo=new THREE.Mesh(new THREE.BoxGeometry(1,3,1),new THREE.MeshPhongMaterial({color: '#FFFFFF'}));
-this.mano=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial({color: '#FFFFFF'}));
+this.brazo=new THREE.Mesh(new THREE.BoxGeometry(1,3,1),new THREE.MeshPhongMaterial({color: '#FFFFF3'}));
+this.mano=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial({color: '#FFFFF3'}));
 
 this.brazo.position.y=0;
 this.mano.position.y=-1;
