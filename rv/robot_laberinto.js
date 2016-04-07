@@ -98,15 +98,18 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
+piernaD.rotation.x +=0.05;
+piernaD.rotation.y +=0.05;
+/*
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
   piernaD.rotation.z+=step;
   piernaI.rotation.z-=step;
-  piernaD.rotation.x +=0.05;
-piernaD.rotation.y +=0.05;
+  
   brazoI.rotation.z+=step;
   brazoD.rotation.z-=step;
 }
+*/
 //Se declaran simbolos globales y se ejecuta setup y loop
 var escena,camara,renderer;
 var step, piernaD,piernaI, cuerpo, brazoI, brazoD, cabeza;
