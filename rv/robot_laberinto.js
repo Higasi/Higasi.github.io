@@ -85,8 +85,7 @@ escena.add(cabeza);
 //Agregamos camara y renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
-piernaD.rotation.x +=0.05;
-piernaD.rotation.y +=0.05;
+
 
 renderer =new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
@@ -103,6 +102,8 @@ if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
   piernaD.rotation.z+=step;
   piernaI.rotation.z-=step;
+  piernaD.rotation.x +=0.05;
+piernaD.rotation.y +=0.05;
   brazoI.rotation.z+=step;
   brazoD.rotation.z-=step;
 }
