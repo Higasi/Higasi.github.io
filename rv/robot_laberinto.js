@@ -98,6 +98,8 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 piernaD.rotation.x +=0.05;
 piernaD.rotation.y +=0.05;
+piernaI.rotation.x +=0.05;
+piernaI.rotation.y +=0.05;
 
 
 if (Math.abs(piernaD.rotation.z)>.5)
