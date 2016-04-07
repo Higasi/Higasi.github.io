@@ -3,8 +3,8 @@ THREE.Object3D.call(this);
 //Mallas para pierna y pie
 
 
-this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),new THREE.MeshPhongMaterial({color: '#00cc00'}));
-this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),new THREE.MeshPhongMaterial({color: '#00cc00'}));
+this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
+this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 
 //Posicion de mallas
 this.pierna.position.y=-2.5;
@@ -53,10 +53,6 @@ Cabeza.prototype=new THREE.Object3D();
 
 //Se procede a definir la funcion de inicializacion del mundo virtual
 function setup(){
-  var LuzPuntual = new THREE.PointLight(0XFFFFFF);
-LuzPuntual.position.x =10;
-LuzPuntual.position.y =10;
-LuzPuntual.position.z =10;
 
 
 
@@ -86,7 +82,7 @@ escena.add(piernaI);
 escena.add(brazoI);
 escena.add(brazoD);
 escena.add(cabeza);
-escena.add(LuzPuntual);
+
 //Agregamos camara y renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
@@ -103,17 +99,7 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
-piernaD.rotation.y +=0.01;
 
-piernaI.rotation.y +=0.01;
-
-brazoD.rotation.y +=0.01;
-
-brazoI.rotation.y +=0.01;
-
-cuerpo.rotation.y +=0.01;
-
-cabeza.rotation.y +=0.01;
 
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
