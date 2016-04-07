@@ -88,7 +88,7 @@ document.body.appendChild(renderer.domElement);
 
 //Loop
 
-/*
+
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
@@ -99,9 +99,8 @@ if (Math.abs(piernaD.rotation.z)>.5)
   brazoI.rotation.z+=step;
   brazoD.rotation.z-=step;
 }
-*/
 //Se declaran simbolos globales y se ejecuta setup y loop
 var escena,camara,renderer;
 var step, piernaD,piernaI, cuerpo, brazoI, brazoD, cabeza;
 setup();
-//loop();
+loop();
