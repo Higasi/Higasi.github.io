@@ -97,17 +97,17 @@ function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 piernaD.rotation.x +=0.01;
-piernaD.rotation.y +=0.01;
+
 piernaI.rotation.x +=0.01;
-piernaI.rotation.y +=0.01;
+
 brazoD.rotation.x +=0.01;
-brazoD.rotation.y +=0.01;
+
 brazoI.rotation.x +=0.01;
-brazoI.rotation.y +=0.01;
+
 cuerpo.rotation.x +=0.01;
-cuerpo.rotation.y +=0.01;
+
 cabeza.rotation.x +=0.01;
-cabeza.rotation.y +=0.01;
+
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
   piernaD.rotation.z+=step;
