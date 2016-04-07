@@ -59,7 +59,7 @@ LuzPuntual.position.y =10;
 LuzPuntual.position.z =10;
 
 
-escena.add(LuzPuntual)
+
   
 cuerpo=new Cuerpo();
 piernaD=new Pierna();
@@ -86,7 +86,7 @@ escena.add(piernaI);
 escena.add(brazoI);
 escena.add(brazoD);
 escena.add(cabeza);
-
+escena.add(LuzPuntual);
 //Agregamos camara y renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
