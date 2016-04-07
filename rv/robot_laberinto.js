@@ -100,8 +100,14 @@ piernaD.rotation.x +=0.05;
 piernaD.rotation.y +=0.05;
 piernaI.rotation.x +=0.05;
 piernaI.rotation.y +=0.05;
-
-
+brazoD.rotation.x +=0.05;
+brazoD.rotation.y +=0.05;
+brazoI.rotation.x +=0.05;
+brazoI.rotation.y +=0.05;
+cuerpo.rotation.x +=0.05;
+cuerpo.rotation.y +=0.05;
+cabeza.rotation.x +=0.05;
+cabeza.rotation.y +=0.05;
 if (Math.abs(piernaD.rotation.z)>.5)
   step=-step;
   piernaD.rotation.z+=step;
