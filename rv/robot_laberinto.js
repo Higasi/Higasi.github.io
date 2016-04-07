@@ -87,6 +87,7 @@ document.body.appendChild(renderer.domElement);
 }
 
 //Loop
+
 /*
 function loop(){
 requestAnimationFrame(loop);
