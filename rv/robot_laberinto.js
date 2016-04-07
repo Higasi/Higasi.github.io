@@ -3,8 +3,10 @@ THREE.Object3D.call(this);
 //Mallas para pierna y pie
 var material= new THREE.MeshDepthMaterial();
 var pier=new THREE.BoxGeometry(1,5,1);
+var pata=new THREE.BoxGeometry(2,1,1);
+
 this.pierna=new THREE.Mesh(pier, material);
-this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
+this.pie=new THREE.Mesh(pata,material);
 
 //Posicion de mallas
 this.pierna.position.y=-2.5;
