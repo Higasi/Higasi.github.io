@@ -4,9 +4,9 @@ var forma= new THREE.BoxGeometry (1,1,1);
 var material= new THREE.MeshPhongMaterial({color: '#00cc00'});
 malla = new THREE.Mesh(forma, material);
 var LuzPuntual = new THREE.PointLight(0XFFFFFF);
-LuzPutual.position.x =10;
-LuzPutual.position.y =10;
-LuzPutual.position.z =10;
+LuzPuntual.position.x =10;
+LuzPuntual.position.y =10;
+LuzPuntual.position.z =10;
 
 escena= new THREE.Scene();
 escena.add(malla);
