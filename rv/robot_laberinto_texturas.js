@@ -18,7 +18,7 @@ this.add(this.pie);
 
 function Cuerpo(){
 THREE.Object3D.call(this);
-this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
+this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10), new THREE.MeshLamberMaterial({color: '#ffffff'}));
 this.cuerpo.position.y=0;
 this.add(this.cuerpo);
 }
@@ -40,7 +40,7 @@ this.add(this.mano);
 
 function Cabeza(){
 THREE.Object3D.call(this);
-this.cabeza=new THREE.Mesh(new THREE.SphereGeometry(1.5));
+this.cabeza=new THREE.Mesh(new THREE.SphereGeometry(1.5), new THREE.MeshLamberMaterial({color: '#ffffff'}));
 this.cabeza.position.y=4;
 this.add(this.cabeza);
 }
