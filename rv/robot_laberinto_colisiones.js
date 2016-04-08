@@ -15,8 +15,8 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(30,1,1),new THREE.MeshNormalMaterial
 	camara = new THREE.PerspectiveCamera();
 	camara.position.z=50;
 
-	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
-	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
+	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,1,0));
+	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,-1,0));
 
 	
 	escena= new THREE.Scene();
@@ -36,8 +36,8 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(30,1,1),new THREE.MeshNormalMaterial
 
 function loop() {
 
-	obstaculo1= raycaster1.intersectObject(cubo1);
-	obstaculo2= raycaster2.intersectObject(cubo2);
+	obstaculo1= raycaster1.intersectObject(cubo3);
+	obstaculo2= raycaster2.intersectObject(cubo4);
 	
 
 
@@ -49,8 +49,8 @@ function loop() {
 
 	
 
-	raycaster1.set(pelota.position, new THREE.Vector3(1,0,0))
-	raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0))
+	raycaster1.set(pelota.position, new THREE.Vector3(0,1,0))
+	raycaster2.set(pelota.position, new THREE.Vector3(0,-1,0))
 
 	
 
