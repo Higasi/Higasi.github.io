@@ -53,7 +53,7 @@ function loop() {
 	step=-step;
 
 	pelota.position.y +=step;
-		pelota.position.x +=0.5;
+		pelota.position.x +=0.1;
 
 	
 
