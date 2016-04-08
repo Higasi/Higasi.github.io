@@ -17,8 +17,7 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(30,1,1),new THREE.MeshNormalMaterial
 
 	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
 	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
-	raycaster3= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,1,0));
-	raycaster4= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,-1,0));
+
 	
 	escena= new THREE.Scene();
 	escena.add(cubo1);
@@ -40,12 +39,10 @@ function loop() {
 	obstaculo1= raycaster1.intersectObject(cubo1);
 	obstaculo2= raycaster2.intersectObject(cubo2);
 	
-	obstaculo3= raycaster3.intersectObject(cubo3);
-	obstaculo4= raycaster4.intersectObject(cubo4);
+
 
 	if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || 
-	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||
-	   (obstaculo3.length>0 && (obstaculo3[0].distance<=0.5)))	
+	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))	
 	step=-step;
 
 	pelota.position.x +=step;
@@ -54,8 +51,7 @@ function loop() {
 
 	raycaster1.set(pelota.position, new THREE.Vector3(1,0,0))
 	raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0))
-	raycaster3.set(pelota.position, new THREE.Vector3(0,1,0))
-	raycaster4.set(pelota.position, new THREE.Vector3(0,-1,0))
+
 	
 
 	requestAnimationFrame(loop);
@@ -63,7 +59,7 @@ function loop() {
 }
 
 var escena, camara, renderer, cubo1, cubo2, pelota;
-var raycaster1, raycaster2,raycaster3,raycaster4,step;
+var raycaster1, raycaster2,step;
 var obstaculo1, obstaculo2,obstaculo3,obstaculo4;
 setup();
 loop();
