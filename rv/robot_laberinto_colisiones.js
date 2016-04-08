@@ -21,6 +21,8 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(1,1,15),new THREE.MeshNormalMaterial
 	escena= new THREE.Scene();
 	escena.add(cubo1);
 	escena.add(cubo2);
+	escena.add(cubo3);
+	escena.add(cubo4);
 	escena.add(camara);
 	escena.add(pelota);
 
