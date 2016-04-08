@@ -1,14 +1,14 @@
 function setup() {
 
-	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,45,1),new THREE.MeshNormalMaterial());
-	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,45,1),new THREE.MeshNormalMaterial());
+	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,15,1),new THREE.MeshNormalMaterial());
+	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,15,1),new THREE.MeshNormalMaterial());
 	pelota= new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
-	cubo1.position.x=7;
-	cubo2.position.x=-7;
+	cubo1.position.x=1;
+	cubo2.position.x=-1;
 	
 	camara = new THREE.PerspectiveCamera();
-	camara.position.z=20;
+	camara.position.z=50;
 
 	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
 	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
