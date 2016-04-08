@@ -49,7 +49,7 @@ function loop() {
 	   
 	   
 	   
-	   )	
+	   	
 	step=-step;
 
 	pelota.position.y +=step;
