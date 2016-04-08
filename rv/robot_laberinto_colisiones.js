@@ -45,8 +45,7 @@ function loop() {
 
 	if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || 
 	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||
-	   (obstaculo3.length>0 && (obstaculo3[0].distance<=0.5))||
-	   (obstaculo4.length>0 && (obstaculo4[0].distance<=0.5)))	
+	   (obstaculo3.length>0 && (obstaculo3[0].distance<=0.5)))	
 	step=-step;
 
 	pelota.position.x +=step-1;
