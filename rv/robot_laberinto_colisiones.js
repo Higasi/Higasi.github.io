@@ -42,7 +42,7 @@ function loop() {
 	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))	
 	step=-step;
 
-	pelota.position.x +=step;
+	pelota.position.x +=step+2;
 	pelota.position.y +=step;
 	
 
