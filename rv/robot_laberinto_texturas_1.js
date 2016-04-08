@@ -23,7 +23,11 @@ this.add(this.pie);
 
 function Cuerpo(){
 THREE.Object3D.call(this);
-this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10), new THREE.MeshLambertMaterial({color: '#9831DC'}));
+THREE.ImageUtils.crossOrigin='';
+var textura= THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
+
+var material= new THREE.MeshBasicMaterial({map: textura});
+this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10), material);
 this.cuerpo.position.y=0;
 this.add(this.cuerpo);
 }
