@@ -18,7 +18,7 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(30,1,1),new THREE.MeshNormalMaterial
 	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,1,0));
 	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,-1,0));
 	raycaster3= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
-	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
+	raycaster4= new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
 
 	
 	escena= new THREE.Scene();
