@@ -2,10 +2,15 @@ function setup() {
 
 	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,15,1),new THREE.MeshNormalMaterial());
 	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,15,1),new THREE.MeshNormalMaterial());
+cubo3= new THREE.Mesh(new THREE.BoxGeometry(1,1,15),new THREE.MeshNormalMaterial());
+	cubo4= new THREE.Mesh(new THREE.BoxGeometry(1,1,15),new THREE.MeshNormalMaterial());
 	pelota= new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
-	cubo1.position.x20;
-	cubo2.position.x=-20;
+	cubo1.position.x=16;
+	cubo2.position.x=-16;
+	
+	cubo3.position.y=16;
+	cubo4.position.y=-16;
 	
 	camara = new THREE.PerspectiveCamera();
 	camara.position.z=50;
