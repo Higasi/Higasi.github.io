@@ -49,7 +49,11 @@ this.add(this.mano);
 
 function Cabeza(){
 THREE.Object3D.call(this);
-this.cabeza=new THREE.Mesh(new THREE.SphereGeometry(1.5), new THREE.MeshLambertMaterial({color: '#ffffff'}));
+THREE.ImageUtils.crossOrigin='';
+var textura= THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+
+var material= new THREE.MeshPhongMaterial({map: textura});
+this.cabeza=new THREE.Mesh(new THREE.SphereGeometry(1.5), material);
 this.cabeza.position.y=4;
 this.add(this.cabeza);
 }
