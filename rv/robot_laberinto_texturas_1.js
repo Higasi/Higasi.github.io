@@ -1,13 +1,15 @@
 function Pierna(){
 THREE.Object3D.call(this);
 //Mallas para pierna y pie
+THREE.ImageUtils.crossOrigin='';
 var textura= THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
+
 var material= new THREE.MeshBasicMaterial({map: textura});
-malla = new THREE.Mesh(forma, material);
 
 
-this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),malla);
-this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),malla);
+
+this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1),material);
+this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1),material);
 
 //Posicion de mallas
 this.pierna.position.y=-2.5;
