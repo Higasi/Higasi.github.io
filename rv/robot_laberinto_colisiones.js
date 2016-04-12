@@ -45,8 +45,9 @@ function loop() {
 
 
 	if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || 
-	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))
-	   )
+	   (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||
+	   (obstaculo3.length>0 && (obstaculo3[0].distance<=0.5))||  
+	     (obstaculo4.length>0 && (obstaculo4[0].distance<=0.5)))
 	   
 	   	
 	step=-step;
@@ -58,8 +59,8 @@ function loop() {
 
 	raycaster1.set(pelota.position, new THREE.Vector3(0,1,0))
 	raycaster2.set(pelota.position, new THREE.Vector3(0,-1,0))
-	raycaster3.set(pelota.position, new THREE.Vector3(0,0,0))
-	raycaster4.set(pelota.position, new THREE.Vector3(0,0,0))
+	raycaster3.set(pelota.position, new THREE.Vector3(0,1,0))
+	raycaster4.set(pelota.position, new THREE.Vector3(0,-1,0))
 	
 
 	
