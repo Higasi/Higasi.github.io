@@ -17,7 +17,7 @@ this.add(new Wall (l,j-_offset,-(i-_offset)));
 else if (map[i][j]=== "r")
 this.add(new Robot(0.5,j - _offset,-(i-_offset)));
 }
-
+}
 function setup(){
 var mapa= new Array();
 mapa[0]="XXXXXXXXXXXXXXXXXXXXXXXX";
