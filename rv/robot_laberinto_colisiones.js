@@ -15,10 +15,8 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,1),new THREE.MeshNormalMaterial
 	camara = new THREE.PerspectiveCamera();
 	camara.position.z=50;
 
-	raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,1,0));
-	raycaster2= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,-1,0));
-	raycaster3= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,0,1));
-	raycaster4= new THREE.Raycaster(pelota.position, new THREE.Vector3(0,0,-1));
+	raycaster= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
+
 
 	
 	escena= new THREE.Scene();
@@ -38,10 +36,10 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,1),new THREE.MeshNormalMaterial
 
 function loop() {
 
-	obstaculo1= raycaster1.intersectObject(cubo3);
-	obstaculo2= raycaster2.intersectObject(cubo4);
-	obstaculo3= raycaster3.intersectObject(cubo1);
-	obstaculo4= raycaster4.intersectObject(cubo2);
+	obstaculo1= raycaster.intersectObject(cubo3);
+	obstaculo2= raycaster.intersectObject(cubo4);
+	obstaculo3= raycaster.intersectObject(cubo1);
+	obstaculo4= raycaster.intersectObject(cubo2);
 
 
 	if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || 
@@ -54,23 +52,50 @@ function loop() {
 
 	pelota.position.y +=step;
 		pelota.position.x +=0.1;
+%%%%%
+if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
+    dir=2;
+    raycaster.set(pelota.position,new THREE.Vector3(0,0,1));
+  }
+  
+  if ((obstaculo1.length>0) && (obstaculo1[0].distance<=0.8)){
+    dir=3;
+    raycaster.set(pelota.position,new THREE.Vector3(-1,0,0));
+  }
+ if ((obstaculo4.length>0) && (obstaculo4[0].distance<=1)){
+    dir=4;
+    raycaster.set(pelota.position,new THREE.Vector3(0,0,-1));
+  }
+  
+  if ((obstaculo2.length>0) && (obstaculo2[0].distance<=0.8)){
+    dir=1;
+    raycaster.set(pelota.position,new THREE.Vector3(1,0,0));
+  }
 
-	
+  
+  if (dir==1){
+    
+     pelota.position.x+=step;
+  }
+  else if(dir==2){
+     pelota.position.z+=step;
+  }
+  else if(dir==3){
+    pelota.position.x-=step;
+  }
+  else if(dir==4){
+    pelota.position.z-=step;
+  }
+ 	
 
-	raycaster1.set(pelota.position, new THREE.Vector3(0,1,0))
-	raycaster2.set(pelota.position, new THREE.Vector3(0,-1,0))
-	raycaster3.set(pelota.position, new THREE.Vector3(0,0,1))
-	raycaster4.set(pelota.position, new THREE.Vector3(0,0,-1))
-	
 
-	
 
-	requestAnimationFrame(loop);
+		requestAnimationFrame(loop);
 	renderer.render(escena,camara);
 }
 
 var escena, camara, renderer, cubo1, cubo2,cubo3,cubo4, pelota;
-var raycaster1, raycaster2,raycaster3,raycaster4,step;
+var raycaster, dir;
 var obstaculo1, obstaculo2,obstaculo3,obstaculo4;
 setup();
 loop();
