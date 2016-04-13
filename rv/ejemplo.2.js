@@ -49,7 +49,7 @@ mapa[24]="XXXXXXXXXXXXXXXXXXXXXXXX";
 environment=new Environment();
 environment.setMap(mapa);
 
-camra=new THREE.PerspectiveCamera();
+camera=new THREE.PerspectiveCamera();
 camera.position.z=30;
 
 renderer=new Three.WebGLRenderer();
