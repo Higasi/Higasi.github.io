@@ -25,7 +25,7 @@ this.children[i].sense(this);
 
 
 Environment.prototype.plan = function(){
-fir(var i=0; i<this.children.lenght;i++){
+for(var i=0; i<this.children.lenght;i++){
 if(this.children[i].sense !== undefined)
 this.children[i].plan(this);
 }
@@ -34,7 +34,7 @@ this.children[i].plan(this);
 
 
 Environment.prototype.act = function(){
-fir(var i=0; i<this.children.lenght;i++){
+for(var i=0; i<this.children.lenght;i++){
 if(this.children[i].sense !== undefined)
 this.children[i].act(this);
 }
