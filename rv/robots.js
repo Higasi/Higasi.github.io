@@ -45,7 +45,7 @@ console.log('Unknown command');
 //rotateCW()
 //rotateCCW()
 
-Robot.prototype.operations={}:
+Robot.prototype.operations={};
 Robot.prototype.operations.goStraight= function(robot, distance){
 if(distance== undefined)
 distance= .05;
