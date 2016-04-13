@@ -32,7 +32,7 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMateria
 	renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
  	document.body.appendChild(renderer.domElement);
 	step=0.9;
-	raycaster= new THREE.Raycaster(pelota.position,new THREE.Vector3(0,1,0));
+	raycaster= new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
  }
 
 
@@ -48,36 +48,36 @@ function loop() {
 
 if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
     dir=2;
-    raycaster.set(pelota.position,new THREE.Vector3(0,1,0));
+    raycaster.set(pelota.position,new THREE.Vector3(-1,0,0));
   }
   
   if ((obstaculo1.length>0) && (obstaculo1[0].distance<=0.8)){
     dir=3;
-    raycaster.set(pelota.position,new THREE.Vector3(-1,0,0));
+    raycaster.set(pelota.position,new THREE.Vector3(0,1,0));
   }
  if ((obstaculo4.length>0) && (obstaculo4[0].distance<=1)){
     dir=4;
-    raycaster.set(pelota.position,new THREE.Vector3(0,-1,0));
+    raycaster.set(pelota.position,new THREE.Vector3(1,0,0));
   }
   
   if ((obstaculo2.length>0) && (obstaculo2[0].distance<=0.8)){
     dir=1;
-    raycaster.set(pelota.position,new THREE.Vector3(1,0,0));
+    raycaster.set(pelota.position,new THREE.Vector3(0,-1,0));
   }
 
   
   if (dir==1){
     
-     pelota.position.x+=step;
+     pelota.position.y-=step;
   }
   else if(dir==2){
-     pelota.position.y+=step;
+     pelota.position.x-=step;
   }
   else if(dir==3){
-    pelota.position.x-=step;
+    pelota.position.y+=step;
   }
   else if(dir==4){
-    pelota.position.y-=step;
+    pelota.position.x+=step;
   }
  	
 
