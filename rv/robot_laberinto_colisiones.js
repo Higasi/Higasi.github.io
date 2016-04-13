@@ -52,7 +52,7 @@ function loop() {
 
 	pelota.position.y +=step;
 		pelota.position.x +=0.1;
-%%%%%
+
 if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
     dir=2;
     raycaster.set(pelota.position,new THREE.Vector3(0,0,1));
