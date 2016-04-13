@@ -38,10 +38,10 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMateria
 
 function loop() {
 
-	obstaculo1= raycaster.intersectObject(cubo3);
-	obstaculo2= raycaster.intersectObject(cubo4);
-	obstaculo3= raycaster.intersectObject(cubo1);
-	obstaculo4= raycaster.intersectObject(cubo2);
+	obstaculo1= raycaster.intersectObject(cubo1);
+	obstaculo2= raycaster.intersectObject(cubo2);
+	obstaculo3= raycaster.intersectObject(cubo3);
+	obstaculo4= raycaster.intersectObject(cubo4);
 
 
 
