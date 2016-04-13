@@ -48,7 +48,7 @@ function loop() {
 
 if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
     dir=2;
-    raycaster.set(pelota.position,new THREE.Vector3(0,0,1));
+    raycaster.set(pelota.position,new THREE.Vector3(0,1,0));
   }
   
   if ((obstaculo1.length>0) && (obstaculo1[0].distance<=0.8)){
@@ -57,7 +57,7 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
   }
  if ((obstaculo4.length>0) && (obstaculo4[0].distance<=1)){
     dir=4;
-    raycaster.set(pelota.position,new THREE.Vector3(0,0,-1));
+    raycaster.set(pelota.position,new THREE.Vector3(0,-1,0));
   }
   
   if ((obstaculo2.length>0) && (obstaculo2[0].distance<=0.8)){
@@ -80,6 +80,8 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
     pelota.position.y-=step;
   }
  	
+
+
 
 
 
