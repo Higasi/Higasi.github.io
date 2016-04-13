@@ -68,16 +68,16 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
   
   if (dir==1){
     
-     pelota.position.x+=step;
-  }
-  else if(dir==2){
      pelota.position.y+=step;
   }
+  else if(dir==2){
+     pelota.position.x+=step;
+  }
   else if(dir==3){
-    pelota.position.x-=step;
+    pelota.position.y-=step;
   }
   else if(dir==4){
-    pelota.position.y-=step;
+    pelota.position.x-=step;
   }
  	
 
