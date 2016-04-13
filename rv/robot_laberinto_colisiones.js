@@ -88,5 +88,7 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
 var escena, camara, renderer, cubo1, cubo2,cubo3,cubo4, pelota;
 var raycaster, dir;
 var obstaculo1, obstaculo2,obstaculo3,obstaculo4;
+
+dir=1;
 setup();
 loop();
