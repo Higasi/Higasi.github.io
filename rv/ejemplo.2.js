@@ -52,7 +52,7 @@ environment.setMap(mapa);
 camera=new THREE.PerspectiveCamera();
 camera.position.z=30;
 
-renderer=new Three.WebGLRenderer();
+renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
