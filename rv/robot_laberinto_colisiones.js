@@ -71,13 +71,13 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=1)){
      pelota.position.x+=step;
   }
   else if(dir==2){
-     pelota.position.z+=step;
+     pelota.position.y+=step;
   }
   else if(dir==3){
     pelota.position.x-=step;
   }
   else if(dir==4){
-    pelota.position.z-=step;
+    pelota.position.y-=step;
   }
  	
 
