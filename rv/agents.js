@@ -17,7 +17,7 @@ THREE.Scene.call(this);
 Environment.prototype= new THREE.Scene();
 
 Environment.prototype.sense = function(){
-fir(var i=0; i<this.children.lenght;i++){
+for(var i=0; i<this.children.lenght;i++){
 if(this.children[i].sense !== undefined)
 this.children[i].sense(this);
 }
