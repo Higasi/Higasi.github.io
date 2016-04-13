@@ -39,7 +39,7 @@ else if(commands in this.operations)
 this.operations[command](this);
 else
 console.log('Unknown command');
-
+}
 //las operaciones posibles con este robot son
 //goStraight()
 //rotateCW()
