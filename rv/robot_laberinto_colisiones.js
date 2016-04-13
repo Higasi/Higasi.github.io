@@ -32,7 +32,7 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMateria
 	renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
  	document.body.appendChild(renderer.domElement);
 	step=0.9;
-	raycaster= new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
+	raycaster= new THREE.Raycaster(pelota.position,new THREE.Vector3(0,1,0));
  }
 
 
