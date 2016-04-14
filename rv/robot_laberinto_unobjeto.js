@@ -78,7 +78,7 @@ THREE.GeometryUtils.merge(forma,piernaI);
 THREE.GeometryUtils.merge(forma,piernaD);
 THREE.GeometryUtils.merge(forma,brazoI);
 THREE.GeometryUtils.merge(forma,brazoD);
-muñeco=new THREE.Mesh(forma);
+muNeco=new THREE.Mesh(forma);
 
 
 //Determinamos que tanto van a rotar las figuras en un momento dado
@@ -86,7 +86,7 @@ step=.01;
 
 //Definimos la escena
 escena=new THREE.Scene();
-escena.add(muñeco);
+escena.add(muNeco);
 
 
 //Agregamos camara y renderer
