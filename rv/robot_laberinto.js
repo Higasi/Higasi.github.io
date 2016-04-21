@@ -18,7 +18,7 @@ this.add(this.pie);
 
 function Cuerpo(){
 THREE.Object3D.call(this);
-this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,2));
+this.cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,7,10));
 this.cuerpo.position.y=0;
 this.add(this.cuerpo);
 }
