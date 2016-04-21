@@ -74,7 +74,7 @@ THREE.GeometryUtils.merge(robot,pied);
 	
 	cubo3.position.y=16;
 	cubo4.position.y=-16;
-	camara = new THREE.PerspectiveCamera(3,80/64,0,1,100);
+	camara = new THREE.PerspectiveCamera();
 	camara.position.z=50;
 
 	
