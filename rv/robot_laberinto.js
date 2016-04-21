@@ -7,7 +7,7 @@ this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
 this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 
 //Posicion de mallas
-this.pierna.position.y=-4.5;
+this.pierna.position.y=-2.5;
 this.pie.position.y=-4.5;
 this.pie.position.x=1;
 
