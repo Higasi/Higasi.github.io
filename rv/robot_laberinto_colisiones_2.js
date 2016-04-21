@@ -12,7 +12,7 @@ var material = new THREE.MeshNormalMaterial();
 
 	var brazoform = new THREE.BoxGeometry(1,1,5 );
 var cabezaform=new THREE.SphereGeometry(1.5);
-var cuerpoform=new THREE.CylinderGeometry(1,2,5,10);
+var cuerpoform=new THREE.BoxGeometry(3,3,5);
 var pieform=new THREE.BoxGeometry(2,1,1);
 var piernaform=new THREE.BoxGeometry(1,1,5);
 var manoform=new THREE.BoxGeometry(1,1,1);
