@@ -108,21 +108,21 @@ function loop() {
 
 
 
-if ((obstaculo3.length>0) && (obstaculo3[0].distance<=5)){
+if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
     dir=2;
     raycaster.set(malla.position,new THREE.Vector3(1,0,0));
   }
   
-  if ((obstaculo1.length>0) && (obstaculo1[0].distance<=5)){
+  if ((obstaculo1.length>0) && (obstaculo1[0].distance<=3)){
     dir=3;
     raycaster.set(malla.position,new THREE.Vector3(0,-1,0));
   }
- if ((obstaculo4.length>0) && (obstaculo4[0].distance<=5)){
+ if ((obstaculo4.length>0) && (obstaculo4[0].distance<=3)){
     dir=4;
     raycaster.set(malla.position,new THREE.Vector3(-1,0,0));
   }
   
-  if ((obstaculo2.length>0) && (obstaculo2[0].distance<=5)){
+  if ((obstaculo2.length>0) && (obstaculo2[0].distance<=3)){
     dir=1;
     raycaster.set(malla.position,new THREE.Vector3(0,1,0));
   }
