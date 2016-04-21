@@ -6,8 +6,8 @@ function setup() {
 cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 
-	var textura = THREE.Texture.Loader('http://akata93.github.io/r2d2.jpg');
-var material = new THREE.MeshPhongMaterial({map: textura });
+
+var material = new THREE.MeshNormalMaterial({ });
 
 
 	var brazoform = new THREE.BoxGeometry(1,1,5 );
