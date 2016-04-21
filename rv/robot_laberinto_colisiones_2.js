@@ -75,8 +75,8 @@ THREE.GeometryUtils.merge(robot,pied);
 	cubo3.position.y=16;
 	cubo4.position.y=-16;
 	camara = new THREE.PerspectiveCamera();
-	camara.position.z=120;
-	camara.position.y= -20;;
+	camara.position.z=30;
+	camara.position.y= -5;;
 	
 
 	//raycaster1= new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
