@@ -6,7 +6,7 @@ function setup() {
 cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 
-	var textura = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
+	var textura = THREE.Texture.Loader('http://akata93.github.io/r2d2.jpg');
 var material = new THREE.MeshPhongMaterial({map: textura });
 
 
@@ -24,7 +24,7 @@ var piei= new THREE.Mesh(pieform,material);
 var piernad= new THREE.Mesh(piernaform,material);
 var piernai= new THREE.Mesh(piernaform,material);
 var brazoi=new THREE.Mesh(brazoform,material);
-var brazoi=new THREE.Mesh(brazoform,material);
+var brazod=new THREE.Mesh(brazoform,material);
 var manoi=new THREE.Mesh(manoform,material);
 var manod=new THREE.Mesh(manoform,material);
 
