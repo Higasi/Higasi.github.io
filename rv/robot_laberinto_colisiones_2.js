@@ -93,7 +93,7 @@ THREE.GeometryUtils.merge(robot,pied);
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
  	document.body.appendChild(renderer.domElement);
-	step=0.9;
+	step=0.2;
 	raycaster= new THREE.Raycaster(malla.position,new THREE.Vector3(0,1,0));
  }
 
