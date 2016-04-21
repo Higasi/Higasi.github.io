@@ -7,7 +7,7 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMateria
 	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 
 
-var material = new THREE.MeshNormalMaterial({ });
+var material = new THREE.MeshNormalMaterial();
 
 
 	var brazoform = new THREE.BoxGeometry(1,1,5 );
