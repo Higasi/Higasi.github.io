@@ -44,10 +44,10 @@ manod.position.z=-1;
 manod.position.x=1;
 
 
-piernai.position.y=-.5;
-piernad.position.y=.5;
-piei.position.y=-.5;
-pied.position.y=.5;
+piernai.position.y=-.8;
+piernad.position.y=.8;
+piei.position.y=-.8;
+pied.position.y=.8;
 brazoi.position.y=-2;
 brazod.position.y=2;
 manoi.position.y=-2;
