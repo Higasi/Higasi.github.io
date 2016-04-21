@@ -7,9 +7,9 @@ this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
 this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 
 //Posicion de mallas
-this.pierna.position.y=-5.5;
+this.pierna.position.y=-4.5;
 this.pie.position.y=-4.5;
-this.pie.position.x=2;
+this.pie.position.x=1;
 
 //Se agrega el objeto 3d para conformar una unidad y se termina la definicion del constructor
 this.add(this.pierna);
