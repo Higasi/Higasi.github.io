@@ -19,7 +19,7 @@ camara.position.z=15;
 camara.position.y=5;
 renderer= new THREE.WebGLRenderer();
 
-renderer= setSize(window.innerHeight*.95, window.innerHeight*.95);
+renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
 renderer.shadowMapEnabled=true;
