@@ -12,7 +12,7 @@ escena= new THREE.Scene();
 escena.add(malla);
 escena.add(base);
 escena.add(iluminacion);
-escena.add(camara);
+
 
 
 camara= new THREE.PerspectiveCamera();
