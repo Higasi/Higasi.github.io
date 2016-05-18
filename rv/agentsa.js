@@ -1,4 +1,4 @@
-function Agent (x=0, y=0){
+function Agent (x=5, y=5){
 	THREE.Object3D.call(this);
 	this.position.x=x;
 	this.position.y=y;
