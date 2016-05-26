@@ -9,7 +9,7 @@ function Robot(size,x,y){
 
 	this.sensor=new Sensor();
 	this.actuator= new THREE.Mesh(
-	new THREE.BoxGeometry(size,size,size),
+	new THREE.BoxGeometry(0.5,2,0.5),
 		new THREE.MeshBasicMaterial({color: '#aa0000'}));
 	this.actuator.commands=[];
 	this.add(this.actuator);
