@@ -26,19 +26,19 @@ var manoi=new THREE.Mesh(manoform,material);
 var manod=new THREE.Mesh(manoform,material);
 
 cuerpo.position.z=0;
-cabeza.position.z=4;
-piernai.position.z=-2.5;
-piernad.position.z=-2.5;
-piei.position.z=-4.5;
-piei.position.x=1;
-pied.position.z=-4.5;
-pied.position.x=1;
+cabeza.position.z=2;
+piernai.position.z=-1;
+piernad.position.z=-1;
+piei.position.z=-2.5;
+piei.position.x=0.2;
+pied.position.z=-2.5;
+pied.position.x=0.2;
 brazoi.position.z=0;
 brazod.position.z=0;
-manoi.position.z=-1;
-manoi.position.x=1;
-manod.position.z=-1;
-manod.position.x=1;
+manoi.position.z=-0.2;
+manoi.position.x=0.2;
+manod.position.z=-0.2;
+manod.position.x=0.2;
 
 
 piernai.position.y=-.8;
