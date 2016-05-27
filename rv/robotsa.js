@@ -4,13 +4,75 @@ function Sensor(position, direction){
 }
 Sensor.prototype=new THREE.Raycaster();
 function Robot(size,x,y){
+	var material = new THREE.MeshNormalMaterial();
+
+
+	var brazoform = new THREE.BoxGeometry(1,1,5 );
+var cabezaform=new THREE.SphereGeometry(1.5);
+var cuerpoform=new THREE.BoxGeometry(3,3,5);
+var pieform=new THREE.BoxGeometry(2,1,1);
+var piernaform=new THREE.BoxGeometry(1,1,5);
+var manoform=new THREE.BoxGeometry(1,1,1);
+
+var cabeza= new THREE.Mesh(cabezaform,material);
+var cuerpo= new THREE.Mesh(cuerpoform,material);
+var pied=new THREE.Mesh(pieform,material);
+var piei= new THREE.Mesh(pieform,material);
+var piernad= new THREE.Mesh(piernaform,material);
+var piernai= new THREE.Mesh(piernaform,material);
+var brazoi=new THREE.Mesh(brazoform,material);
+var brazod=new THREE.Mesh(brazoform,material);
+var manoi=new THREE.Mesh(manoform,material);
+var manod=new THREE.Mesh(manoform,material);
+
+cuerpo.position.z=0;
+cabeza.position.z=4;
+piernai.position.z=-2.5;
+piernad.position.z=-2.5;
+piei.position.z=-4.5;
+piei.position.x=1;
+pied.position.z=-4.5;
+pied.position.x=1;
+brazoi.position.z=0;
+brazod.position.z=0;
+manoi.position.z=-1;
+manoi.position.x=1;
+manod.position.z=-1;
+manod.position.x=1;
+
+
+piernai.position.y=-.8;
+piernad.position.y=.8;
+piei.position.y=-.8;
+pied.position.y=.8;
+brazoi.position.y=-2;
+brazod.position.y=2;
+manoi.position.y=-2;
+manod.position.z=2;
+
+
+var robot= new THREE.Geometry();
+
+THREE.GeometryUtils.merge(robot,cabeza);
+THREE.GeometryUtils.merge(robot,cuerpo);
+THREE.GeometryUtils.merge(robot,brazoi);
+THREE.GeometryUtils.merge(robot,brazod);
+THREE.GeometryUtils.merge(robot,manoi);
+THREE.GeometryUtils.merge(robot,manod);
+THREE.GeometryUtils.merge(robot,piernai);
+THREE.GeometryUtils.merge(robot,piernad);
+THREE.GeometryUtils.merge(robot,piei);
+THREE.GeometryUtils.merge(robot,pied);
+
+
+	
+	
+	
 	Agent.call(this,x,y);
 
 
 	this.sensor=new Sensor();
-	this.actuator= new THREE.Mesh(
-	new THREE.BoxGeometry(0.5,2,0.5),
-		new THREE.MeshBasicMaterial({color: '#aa0000'}));
+	this.actuator= new THREE.Mesh(robot,material);
 	this.actuator.commands=[];
 	this.add(this.actuator);
 }
