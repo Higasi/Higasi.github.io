@@ -41,14 +41,14 @@ manod.position.z=-0.2;
 manod.position.x=0.2;
 
 
-piernai.position.y=-.8;
-piernad.position.y=.8;
-piei.position.y=-.8;
-pied.position.y=.8;
-brazoi.position.y=-2;
-brazod.position.y=2;
-manoi.position.y=-2;
-manod.position.z=2;
+piernai.position.y=-.2;
+piernad.position.y=.2;
+piei.position.y=-.2;
+pied.position.y=.2;
+brazoi.position.y=-0.5;
+brazod.position.y=0.5;
+manoi.position.y=-0.5;
+manod.position.z=0.5;
 
 
 var robot= new THREE.Geometry();
