@@ -45,10 +45,10 @@ piernai.position.y=-.2;
 piernad.position.y=.2;
 piei.position.y=-.2;
 pied.position.y=.2;
-brazoi.position.y=-0.5;
-brazod.position.y=0.5;
-manoi.position.y=-0.5;
-manod.position.z=0.5;
+brazoi.position.y=-1;
+brazod.position.y=1;
+manoi.position.y=-1;
+manod.position.z=1;
 
 
 var robot= new THREE.Geometry();
