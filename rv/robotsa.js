@@ -7,12 +7,12 @@ function Robot(size,x,y){
 	var material = new THREE.MeshNormalMaterial();
 
 
-	var brazoform = new THREE.BoxGeometry(1,1,5 );
-var cabezaform=new THREE.SphereGeometry(1.5);
-var cuerpoform=new THREE.BoxGeometry(3,3,5);
-var pieform=new THREE.BoxGeometry(2,1,1);
-var piernaform=new THREE.BoxGeometry(1,1,5);
-var manoform=new THREE.BoxGeometry(1,1,1);
+	var brazoform = new THREE.BoxGeometry(0.2,0.2,3 );
+var cabezaform=new THREE.SphereGeometry(0.5);
+var cuerpoform=new THREE.BoxGeometry(1,1,3);
+var pieform=new THREE.BoxGeometry(0.5,0.2,0.2);
+var piernaform=new THREE.BoxGeometry(0.2,0.2,3);
+var manoform=new THREE.BoxGeometry(0.2,0.2,0.2);
 
 var cabeza= new THREE.Mesh(cabezaform,material);
 var cuerpo= new THREE.Mesh(cuerpoform,material);
