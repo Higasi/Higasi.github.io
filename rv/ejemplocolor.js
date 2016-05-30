@@ -22,6 +22,13 @@ Environment.prototype.setMap= function(map){
 }
 
 function setup(){
+  var LuzPuntual = new THREE.PointLight(0XFFFFFF);
+LuzPuntual.position.x =10;
+LuzPuntual.position.y =10;
+LuzPuntual.position.z =10;
+
+
+escena.add(LuzPuntual)
   var mapa=new Array();
   mapa[0]="xxxxxxxxxxxxxxxxxxxxxxxx";
   mapa[1]="x  r                   x";
