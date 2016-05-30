@@ -122,7 +122,8 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
   
   if ((obstaculo1.length>0) && (obstaculo1[0].distance<=3)){
     dir=3;
-    raycaster.set(malla.position,new THREE.Vector3(0,-1,0));
+    raycaster.set(malla.position,new THREE.Vector3(0,-1,0))
+    	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshLambertMaterial({color: '#000000'}));;
   }
  if ((obstaculo4.length>0) && (obstaculo4[0].distance<=3)){
     dir=4;
