@@ -1,5 +1,5 @@
 function setup() {
-mat1=new THREE.MeshLambertMaterial({color: '#00cc00'})
+
 	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat1);
 	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshNormalMaterial());
 cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
@@ -117,12 +117,13 @@ function loop() {
 
 if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
     dir=2;
+   
     raycaster.set(malla.position,new THREE.Vector3(1,0,0));
   }
   
   if ((obstaculo1.length>0) && (obstaculo1[0].distance<=3)){
     dir=3;
-
+mat1=new THREE.MeshLambertMaterial({color: '#0101DF'})
     raycaster.set(malla.position,new THREE.Vector3(0,-1,0))
     	;
   }
