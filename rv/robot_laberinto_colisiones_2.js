@@ -9,6 +9,11 @@ cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMateria
 
 var material = new THREE.MeshNormalMaterial();
 
+  var LuzPuntual = new THREE.PointLight(0XFFFFFF);
+LuzPuntual.position.x =10;
+LuzPuntual.position.y =10;
+LuzPuntual.position.z =10;
+
 
 	var brazoform = new THREE.BoxGeometry(1,1,5 );
 var cabezaform=new THREE.SphereGeometry(1.5);
@@ -91,6 +96,7 @@ THREE.GeometryUtils.merge(robot,pied);
 	escena.add(cubo4);
 	escena.add(camara);
 	escena.add(malla);
+	escena.add(luzpuntual);
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
