@@ -28,7 +28,6 @@ LuzPuntual.position.y =10;
 LuzPuntual.position.z =10;
 
 
-escena.add(LuzPuntual)
   var mapa=new Array();
   mapa[0]="xxxxxxxxxxxxxxxxxxxxxxxx";
   mapa[1]="x  r                   x";
@@ -58,6 +57,8 @@ escena.add(LuzPuntual)
   
   environment = new Environment();
   environment.setMap(mapa);
+  
+environment.add(LuzPuntual);
   camera=new THREE.PerspectiveCamera();
   camera.position.z=30;
   renderer= new THREE.WebGLRenderer();
