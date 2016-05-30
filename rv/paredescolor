@@ -1,0 +1,21 @@
+s (20 sloc)  466 Bytes
+<!doctype html>
+<html>
+  <head>
+    <title>Ejemplo: Robots con agentes</title>
+    <meta http-equiv="Contect-Type" content="text/html; charset= UTF-8">
+    <style>
+      body {text-align: center;}
+    </style>
+  </head>
+  <body>
+    <script src="http://mrdoob.github.com/three.js/build/three.min.js">
+    </script>
+    <script src="agentscolor.js">
+    </script>
+    <script src="robotscolor.js">
+    </script>
+    <script src="ejemplocolor.js">
+    </script>
+  </body>
+</html>
