@@ -1,11 +1,20 @@
 function setup() {
 mat1=new THREE.MeshLambertMaterial({color: '#0101DF'});
 mat2=new THREE.MeshLambertMaterial({color: '#FFFF00'});
+mat3=new THREE.MeshLambertMaterial({color: '#0101DF'});
+mat4=new THREE.MeshLambertMaterial({color: '#FFFF00'});
+mat5=new THREE.MeshLambertMaterial({color: '#0101DF'});
+mat6=new THREE.MeshLambertMaterial({color: '#FFFF00'});
+mat7=new THREE.MeshLambertMaterial({color: '#0101DF'});
+mat8=new THREE.MeshLambertMaterial({color: '#FFFF00'});
 	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat1);
 		cubo12= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat2);
-	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshNormalMaterial());
-cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
-	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
+	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat3);
+	cubo22= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat4);
+cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),mat5);
+cubo32= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),mat6);
+	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),mat7);
+		cubo42= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),mat8);
 
 
 var material = new THREE.MeshNormalMaterial();
@@ -80,8 +89,12 @@ THREE.GeometryUtils.merge(robot,pied);
 	
 	cubo2.position.x=-16;
 	
+	cubo22.position.x=-16;
+	
 	cubo3.position.y=16;
+		cubo32.position.y=16;
 	cubo4.position.y=-16;
+		cubo42.position.y=-16;
 	camara = new THREE.PerspectiveCamera();
 	camara.position.z=70;
 		camara.position.y=10;
@@ -120,6 +133,8 @@ function loop() {
 
 
 if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
+    	escena.add(cubo32);
+    	obstaculo1= raycaster.intersectObject(cubo32);
     dir=2;
    
     raycaster.set(malla.position,new THREE.Vector3(1,0,0));
@@ -135,11 +150,17 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
     	;
   }
  if ((obstaculo4.length>0) && (obstaculo4[0].distance<=3)){
+   
+   	escena.add(cubo42);
+    	obstaculo1= raycaster.intersectObject(cubo42);
     dir=4;
     raycaster.set(malla.position,new THREE.Vector3(-1,0,0));
   }
   
   if ((obstaculo2.length>0) && (obstaculo2[0].distance<=3)){
+    	escena.add(cubo22);
+    	obstaculo1= raycaster.intersectObject(cubo22);
+    
     dir=1;
     raycaster.set(malla.position,new THREE.Vector3(0,1,0));
   }
