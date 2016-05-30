@@ -96,7 +96,7 @@ THREE.GeometryUtils.merge(robot,pied);
 	escena.add(cubo4);
 	escena.add(camara);
 	escena.add(malla);
-	escena.add(luzpuntual);
+	escena.add(LuzPuntual);
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
