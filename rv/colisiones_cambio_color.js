@@ -1,5 +1,5 @@
 function setup() {
-
+mat1=new THREE.MeshLambertMaterial({color: '#FE2E64'})
 	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat1);
 	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshNormalMaterial());
 cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
