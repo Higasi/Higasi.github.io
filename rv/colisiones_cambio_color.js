@@ -1,6 +1,8 @@
 function setup() {
-mat1=new THREE.MeshLambertMaterial({color: '#FE2E64'})
+mat1=new THREE.MeshLambertMaterial({color: '#0101DF'});
+mat1=new THREE.MeshLambertMaterial({color: '#FFFF00'});
 	cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat1);
+		cubo12= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),mat2);
 	cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshNormalMaterial());
 cubo3= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
 	cubo4= new THREE.Mesh(new THREE.BoxGeometry(32,1,10),new THREE.MeshNormalMaterial());
@@ -74,6 +76,8 @@ THREE.GeometryUtils.merge(robot,pied);
 	malla=new THREE.Mesh(robot, material);
 	
 	cubo1.position.x=16;
+		cubo12.position.x=16;
+	
 	cubo2.position.x=-16;
 	
 	cubo3.position.y=16;
@@ -122,8 +126,11 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
   }
   
   if ((obstaculo1.length>0) && (obstaculo1[0].distance<=3)){
+    	escena.add(cubo12);
+    	obstaculo1= raycaster.intersectObject(cubo12);
+    
     dir=3;
-mat1=new THREE.MeshLambertMaterial({color: '#0101DF'})
+
     raycaster.set(malla.position,new THREE.Vector3(0,-1,0))
     	;
   }
