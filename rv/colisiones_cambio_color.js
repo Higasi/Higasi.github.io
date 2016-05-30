@@ -145,7 +145,7 @@ if ((obstaculo3.length>0) && (obstaculo3[0].distance<=3)){
      malla.position.x+=step;
   }
   else if(dir==3){
-    cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,32,10),new THREE.MeshLambertMaterial({color: '#F6CECE'}));
+ 
     malla.position.y-=step;
   }
   else if(dir==4){
