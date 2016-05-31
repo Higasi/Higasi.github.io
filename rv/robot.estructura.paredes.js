@@ -109,14 +109,14 @@ var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
-if(obstaculo[0].object.name=="meta")
+if(obstaculo[0].object.name=="goal")
 this.g=true;
 }
 else
 this.sensor.colision=false;
 if((obstaculo3.length>0 && (obstaculo3[0].distance<=3)))
 {
-if(obstaculo3[0].object.name=="meta")
+if(obstaculo3[0].object.name=="goal")
 this.g=true;
 }
 
@@ -132,12 +132,12 @@ this.sensor2.colision=false;
 
 if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
 {
-if(obstaculo3[0].object.name=="meta")
+if(obstaculo3[0].object.name=="goal")
 this.gi=true;
 }
 if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
-if(obstaculo[0].object.name=="meta"){
+if(obstaculo[0].object.name=="goal"){
 this.ga=true;
  }
 }
