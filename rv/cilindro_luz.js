@@ -7,7 +7,7 @@ var light1 = new THREE.PointLight( 0xff0040, 1, 50 );
 			
 			
 malla = new THREE.Mesh(forma, material);
-malla.material.transparent = true;
+malla.material.transparent = 1;
 malla.material.opacity=0.5;
   var LuzPuntual = new THREE.PointLight(0XFFFFFF,1000);
   malla.position.x=1;
