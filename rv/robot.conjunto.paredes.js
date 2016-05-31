@@ -11,7 +11,7 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
-function Meta(size,x,y){
+function Goal(size,x,y){
 	var textura1  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/terrain/grasslight-thin.jpg');
 
  THREE.ImageUtils.crossOrigin='';
@@ -20,7 +20,7 @@ function Meta(size,x,y){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
- this.name="meta";
+ this.name="goal";
 }
 
 Meta.prototype=new THREE.Mesh();
@@ -34,7 +34,7 @@ Environment.prototype.setMap=function(map){
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
  else if(map[i][j]==='m')
- this.add(new Meta(4,-20+4*j,-20+4*i));
+ this.add(new Goal(4,-20+4*j,-20+4*i));
  }
 }
 
@@ -46,9 +46,9 @@ function setup(){
  mapa[1] ="x                      x";
  mapa[2] ="x                      x";
  mapa[3] ="x             r        x"; 
- mapa[4] ="x                      x";
+ mapa[4] ="xxxxxxxxxx  xxxxxxxxxxxx";
  mapa[5] ="x                      x";
- mapa[6] ="x                   r  x"; 
+ mapa[6] ="x                      x"; 
  mapa[7] ="x                      x";
  mapa[8] ="xxx   xxxxxxxxxxxxxxxxxx";
  mapa[9] ="x                      x";
@@ -58,12 +58,12 @@ function setup(){
  mapa[13]="x                      x";
  mapa[14]="x                      x";
  mapa[15]="x                      x";
- mapa[16]="x                      x";
+ mapa[16]="xxxxxx   xxxxxxxxxxxxxxx";
  mapa[17]="x                      x";
  mapa[18]="x                      x";
  mapa[19]="xxxxxxxxx   xxxxxxxxxxxx";
  mapa[20]="x                      x";
- mapa[21]="x                      x";
+ mapa[21]="xxxxxx  xxxxxxxxxxxxxxxx";
  mapa[22]="x                      x";
  mapa[23]="x          m           x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
