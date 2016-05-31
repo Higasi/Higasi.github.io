@@ -10,8 +10,13 @@ Sensor.prototype=new THREE.Raycaster();
 
 
 function Robots (x,y){
+ var text1= THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
+
+var material1= new THREE.MeshBasicMaterial({map: text1});
+ var text2= THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+
+var material2= new THREE.MeshBasicMaterial({map: text2});
  
- 	var material = new THREE.MeshNormalMaterial();
 
 
 	var brazoform = new THREE.BoxGeometry(0.2,0.2,3 );
@@ -21,16 +26,16 @@ var pieform=new THREE.BoxGeometry(0.5,0.2,0.2);
 var piernaform=new THREE.BoxGeometry(0.2,0.2,3);
 var manoform=new THREE.BoxGeometry(0.2,0.2,0.2);
 
-var cabeza= new THREE.Mesh(cabezaform,material);
-var cuerpo= new THREE.Mesh(cuerpoform,material);
-var pied=new THREE.Mesh(pieform,material);
-var piei= new THREE.Mesh(pieform,material);
-var piernad= new THREE.Mesh(piernaform,material);
-var piernai= new THREE.Mesh(piernaform,material);
-var brazoi=new THREE.Mesh(brazoform,material);
-var brazod=new THREE.Mesh(brazoform,material);
-var manoi=new THREE.Mesh(manoform,material);
-var manod=new THREE.Mesh(manoform,material);
+var cabeza= new THREE.Mesh(cabezaform,material2);
+var cuerpo= new THREE.Mesh(cuerpoform,material1);
+var pied=new THREE.Mesh(pieform,material2);
+var piei= new THREE.Mesh(pieform,material2);
+var piernad= new THREE.Mesh(piernaform,material1);
+var piernai= new THREE.Mesh(piernaform,material1);
+var brazoi=new THREE.Mesh(brazoform,material1);
+var brazod=new THREE.Mesh(brazoform,material1);
+var manoi=new THREE.Mesh(manoform,material2);
+var manod=new THREE.Mesh(manoform,material2);
 
 cuerpo.position.z=0;
 cabeza.position.z=2;
@@ -80,7 +85,7 @@ this.sensor2= new Sensor();
 this.sensor3= new Sensor();
 this.sensor4= new Sensor();
 
-this.actuator= new THREE.Mesh(robot,material);
+this.actuator= new THREE.Mesh(robot);
 idRobot=this.actuator;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
