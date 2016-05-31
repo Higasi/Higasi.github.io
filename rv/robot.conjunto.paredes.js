@@ -32,7 +32,7 @@ Environment.prototype.setMap=function(map){
  if(map[i][j]==="x")
  this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='g')
- this.add(new Goal+4*j,-20+4*i));
+ this.add(new Goal(4*j,-20+4*i));
  else if(map[i][j]==='r')
  this.add(new Robots(4,-20+4*j,-20+4*i));
  }
