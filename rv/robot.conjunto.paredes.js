@@ -11,7 +11,7 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
-function Goal(size,x,y){
+function Meta(size,x,y){
 	var textura1  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/terrain/grasslight-thin.jpg');
 
  THREE.ImageUtils.crossOrigin='';
@@ -20,10 +20,10 @@ function Goal(size,x,y){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
- this.name="goal";
+ this.name="meta";
 }
 
-Goal.prototype=new THREE.Mesh();
+Meta.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
  //var _offset=Math.floor(map.length/2);
@@ -34,13 +34,12 @@ Environment.prototype.setMap=function(map){
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
  else if(map[i][j]==='m')
- this.add(new Goal(4,-20+4*j,-20+4*i));
+ this.add(new Meta(4,-20+4*j,-20+4*i));
  }
 }
 
 function setup(){
- document.addEventListener( 'keydown', onKeyDown, false );
- document.addEventListener( 'keyup', onKeyUp, false );
+
  var mapa=new Array();
   mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
  mapa[1] ="x                      x";
@@ -78,36 +77,10 @@ function setup(){
  k=0;
 }
 
-function onKeyDown ( event ) {
-	event.stopPropagation();
-	switch( event.keyCode ) {
-	case 80: boton=true; break;
-	case 38: botonu=true; break;
-	case 40: botond=true; break;
-	case 37: botonl=true; break;
-	case 39: botonr=true; break;
-				}
-	}
-function onKeyUp ( event ) {
-	event.stopPropagation();
-	switch( event.keyCode ) {
-	case 80: boton=false; break;
-	case 38: botonu=false; break;
-	case 40: botond=false; break;
-	case 37: botonl=false; break;
-	case 39: botonr=false; break;
-				}
-	}
+
 
 function loop(){
- if(boton==true){
-	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 160 / 2, 50 / - 2, 5, 200 );
-	camara.position.z=150;
-}
-else{
-	camara=new THREE.PerspectiveCamera;
-	 camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
-}
+
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
@@ -115,7 +88,7 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,boton,k;
+var clock,environment,camara,renderer,idRobot,k;
 setup();
 loop();
 
