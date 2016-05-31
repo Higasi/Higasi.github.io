@@ -1,3 +1,5 @@
+
+ 
 function Wall(size,x,y){
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
@@ -39,29 +41,29 @@ function setup(){
  document.addEventListener( 'keyup', onKeyUp, false );
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
- mapa[1] ="x r      xxxxxxxxxxxxxxx";
- mapa[2] ="x        xxxxxxxxxxxxxxx";
- mapa[3] ="x        xxxxxxxxxxxxxxx"; 
- mapa[4] ="x            xxxxxxxxxxx";
- mapa[5] ="x            xxxxxxxxxxx";
- mapa[6] ="xxx                    x"; 
- mapa[7] ="xxx        xxxx        x";
- mapa[8] ="xxx        xxxx        x";
- mapa[9] ="xxx        xxxxxxxxxxxxx";
- mapa[10]="xxx        xxxxxx     xx"; 
- mapa[11]="xxx    xxxxxxxxxx     xx";
- mapa[12]="xxx    xxxxx          xx";
- mapa[13]="xxx    xxxxx        xxxx";
- mapa[14]="xxx                    x";
- mapa[15]="x     xxxxxxxxxxxxxxxxxx";
- mapa[16]="x     xxxxxxxxxxxxxxxxxx";
- mapa[17]="x     xxxxxxxxxxxxxxxxxx";
- mapa[18]="x                     g";
- mapa[19]="x        xxxxxxxxxxxxxxx";
+ mapa[1] ="x                      x";
+ mapa[2] ="x                      x";
+ mapa[3] ="x             r        x"; 
+ mapa[4] ="x                      x";
+ mapa[5] ="x                      x";
+ mapa[6] ="x                   r  x"; 
+ mapa[7] ="x                      x";
+ mapa[8] ="xxx   xxxxxxxxxxxxxxxxxx";
+ mapa[9] ="x                      x";
+ mapa[10]="x                      x"; 
+ mapa[11]="x                      x";
+ mapa[12]="xxxxxxxxxxxxxxxxx  xxxxx";
+ mapa[13]="x                      x";
+ mapa[14]="x                      x";
+ mapa[15]="x      g               x";
+ mapa[16]="x                      x";
+ mapa[17]="x                      x";
+ mapa[18]="x                      x";
+ mapa[19]="xxxxxxxxx   xxxxxxxxxxxx";
  mapa[20]="x                      x";
  mapa[21]="x                      x";
- mapa[22]="x                      x";
- mapa[23]="x              r       x";
+ mapa[22]="x           r          x";
+ mapa[23]="x                      x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
  environment.setMap(mapa);
@@ -97,7 +99,7 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 160 / 2, 50 / - 2, 5, 200 );
-	camara.position.z=1000;
+	camara.position.z=150;
 }
 else{
 	camara=new THREE.PerspectiveCamera;
@@ -113,3 +115,5 @@ else{
 var clock,environment,camara,renderer,idRobot,boton,k;
 setup();
 loop();
+
+
