@@ -14,7 +14,7 @@ malla = new THREE.Mesh(forma, material);
       malla.position.z=1;
 
 
-light1.position.set(0,0,0);
+light1.position.set(1,1,0);
 
 escena= new THREE.Scene();
 escena.add(malla);
