@@ -85,7 +85,7 @@ this.sensor2= new Sensor();
 this.sensor3= new Sensor();
 this.sensor4= new Sensor();
 
-this.actuator= new THREE.Mesh(robot);
+this.actuator= new THREE.Mesh(robot,material2);
 idRobot=this.actuator;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
