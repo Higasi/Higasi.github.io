@@ -1,7 +1,8 @@
 
 
 function setup(){
-
+ document.addEventListener( 'keydown', onKeyDown, false );
+ document.addEventListener( 'keyup', onKeyUp, false );
 var material = new THREE.MeshNormalMaterial();
 
 
@@ -65,17 +66,16 @@ THREE.GeometryUtils.merge(robot,pied);
 
 	
 	
- document.addEventListener( 'keydown', onKeyDown, false );
- document.addEventListener( 'keyup', onKeyUp, false );
+
  var luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=0;
- luzPuntual.position.y=10;
- luzPuntual.position.z=0;
+ luzPuntual.position.y=0;
+ luzPuntual.position.z=10;
  escena=new THREE.Scene();
  escena.add(luzPuntual);
  escena.add(robot);
  camara=new THREE.PerspectiveCamera();
- camara.position.z=50;
+ camara.position.z=20;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -131,7 +131,7 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
 
-var escena,camara,renderer,rob,obs,boton,ayuda,botonu,botond,botonl,botonr;
+var escena,camara,renderer,boton,ayuda,botonu,botond,botonl,botonr;
 setup();
 loop();
 
