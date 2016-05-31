@@ -17,7 +17,7 @@ malla = new THREE.Mesh(forma, material);
 light1.position.set(1,1,0);
 
 escena= new THREE.Scene();
-	escena.add( new THREE.AmbientLight( 0x00020 ) );
+	escena.add( new THREE.AmbientLight( 0xFFFFFF ) );
 escena.add(malla);
 //escena.add(LuzPuntual); 
 	
