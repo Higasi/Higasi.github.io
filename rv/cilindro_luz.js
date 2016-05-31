@@ -2,7 +2,7 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (1,1,5);
-var material = new THREE.MeshNormalMaterial({opacity:0.1,transparent:true} );
+var material = new THREE.MeshLambertMaterial({opacity:0.1,transparent:true} );
 var light1 = new THREE.PointLight( 0xFFFFFF, 10, 50 );
 			
 			
@@ -17,7 +17,7 @@ malla = new THREE.Mesh(forma, material);
 light1.position.set(2,2,2);
 
 escena= new THREE.Scene();
-//escena.add(malla);
+escena.add(malla);
 //escena.add(LuzPuntual); 
 	
 	escena.add( light1 );
