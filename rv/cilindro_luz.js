@@ -14,9 +14,7 @@ malla = new THREE.Mesh(forma, material);
       malla.position.z=1;
 
 
-light1.position.x=1;
-light1.position.y=1;
-light1.position.z=1;
+light1.position.set(2,2,2);
 
 escena= new THREE.Scene();
 //escena.add(malla);
@@ -25,7 +23,7 @@ escena= new THREE.Scene();
 	escena.add( light1 );
 
 camara= new THREE.PerspectiveCamera();
-camara.position.z=10;
+camara.position.z=5;
 renderer= new THREE.WebGLRenderer();
 renderer. setSize( window.innerHeight*.95, window.innerHeight*.95);
 document.body.appendChild( renderer.domElement);
