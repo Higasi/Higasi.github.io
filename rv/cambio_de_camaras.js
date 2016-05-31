@@ -64,7 +64,7 @@ THREE.GeometryUtils.merge(robot,piei);
 THREE.GeometryUtils.merge(robot,pied);
 
 
-	
+malla=new THREE.Mesh(robot, material);	
 	
 
  var luzPuntual=new THREE.PointLight(0xffffff);
@@ -73,7 +73,7 @@ THREE.GeometryUtils.merge(robot,pied);
  luzPuntual.position.z=10;
  escena=new THREE.Scene();
  escena.add(luzPuntual);
- escena.add(robot);
+ escena.add(malla);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=20;
  renderer=new THREE.WebGLRenderer();
@@ -131,7 +131,7 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
 
-var escena,camara,renderer,boton,ayuda,botonu,botond,botonl,botonr;
+var escena,camara,renderer,boton,ayuda,botonu,botond,botonl,botonr,malla;
 setup();
 loop();
 
