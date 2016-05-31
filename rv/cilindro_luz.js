@@ -2,8 +2,8 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (1,1,5);
-var material = new THREE.MeshLambertMaterial({opacity:0.1,transparent:true} );
-var light1 = new THREE.PointLight( 0xFFFFFF, 10, 50 );
+var material = new THREE.MeshLambertMaterial({opacity:0.9,transparent:false} );
+var light1 = new THREE.PointLight( 0xFFFFFF, 20, 50 );
 			
 			
 malla = new THREE.Mesh(forma, material);
