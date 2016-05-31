@@ -12,11 +12,9 @@ function Wall(size,x,y){
 Wall.prototype=new THREE.Mesh();
 
 function Goal(size,x,y){
-	var textura1  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/terrain/grasslight-thin.jpg');
-
  THREE.ImageUtils.crossOrigin='';
-
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura1}));
+ var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/imagenes/cuadros.jpg?raw=true');
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura}));
  this.size=size;
  this.position.x=x;
  this.position.y=y;
@@ -31,10 +29,10 @@ Environment.prototype.setMap=function(map){
  for(var j=0;j<map.length;j++){
  if(map[i][j]==="x")
  this.add(new Wall(4,-20+4*j,-20+4*i));
- else if(map[i][j]==='g')
- this.add(new Goal(4*j,-20+4*i));
  else if(map[i][j]==='r')
- this.add(new Robots(4,-20+4*j,-20+4*i));
+ this.add(new Robots(-20+4*j,-20+4*i));
+ else if(map[i][j]==='g')
+ this.add(new Goal(4,-20+4*j,-20+4*i));
  }
 }
 
