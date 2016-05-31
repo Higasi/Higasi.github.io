@@ -19,7 +19,7 @@ light1.position.y=1;
 light1.position.z=1;
 
 escena= new THREE.Scene();
-escena.add(malla);
+//escena.add(malla);
 //escena.add(LuzPuntual); 
 	
 	escena.add( light1 );
