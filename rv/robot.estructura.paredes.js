@@ -1,3 +1,4 @@
+
 function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
@@ -108,7 +109,7 @@ this.g=true;
 
 
 
-if((obstaculo2.length>0 && (obstaculo2[0].distance>=3)))
+if((obstaculo2.length>0 && (obstaculo2[0].distance>=5)))
 {
 this.sensor2.colision=true;
 }
@@ -121,7 +122,7 @@ if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
 if(obstaculo3[0].object.name=="goal")
 this.gi=true;
 }
-if((obstaculo.length>0 && (obstaculo[0].distance>=5)))
+if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
 if(obstaculo[0].object.name=="goal"){
 this.ga=true;
