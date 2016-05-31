@@ -108,7 +108,7 @@ this.g=true;
 
 
 
-if((obstaculo2.length>0 && (obstaculo2[0].distance>=5)))
+if((obstaculo2.length>0 && (obstaculo2[0].distance>=3)))
 {
 this.sensor2.colision=true;
 }
@@ -116,7 +116,7 @@ else
 this.sensor2.colision=false;
 
 
-if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
+if((obstaculo3.length>0 && (obstaculo3[0].distance>=3)))
 {
 if(obstaculo3[0].object.name=="goal")
 this.gi=true;
