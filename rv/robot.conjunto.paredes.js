@@ -40,12 +40,12 @@ function setup(){
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
  mapa[1] ="x r      xxxxxxxxxxxxxxx";
- mapa[2] ="xxxxx    xxxxxxxxxxxxxxx";
- mapa[3] ="xxxxx    xxxxxxxxxxxxxxx"; 
- mapa[4] ="xxxxx        xxxxxxxxxxx";
- mapa[5] ="xxxxx        xxxxxxxxxxx";
- mapa[6] ="xxxxx                  x"; 
- mapa[7] ="xxxxx      xxxx        x";
+ mapa[2] ="x        xxxxxxxxxxxxxxx";
+ mapa[3] ="x        xxxxxxxxxxxxxxx"; 
+ mapa[4] ="x            xxxxxxxxxxx";
+ mapa[5] ="x            xxxxxxxxxxx";
+ mapa[6] ="xxx                    x"; 
+ mapa[7] ="xxx        xxxx        x";
  mapa[8] ="xxx        xxxx        x";
  mapa[9] ="xxx        xxxxxxxxxxxxx";
  mapa[10]="xxx        xxxxxx     xx"; 
@@ -57,19 +57,19 @@ function setup(){
  mapa[16]="x     xxxxxxxxxxxxxxxxxx";
  mapa[17]="x     xxxxxxxxxxxxxxxxxx";
  mapa[18]="x                     g";
- mapa[19]="xxxxxxxxxxxxxxxxxxxxxxxx";
+ mapa[19]="x        xxxxxxxxxxxxxxx";
  mapa[20]="x                      x";
  mapa[21]="x                      x";
  mapa[22]="x                      x";
- mapa[23]="x                      x";
+ mapa[23]="x              r       x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
  environment.setMap(mapa);
- camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
+ camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
- environment.add(camara);
+ environment.ad (camara);
  k=0;
 }
 
