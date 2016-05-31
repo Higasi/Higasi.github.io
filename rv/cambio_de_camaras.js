@@ -71,7 +71,6 @@ THREE.GeometryUtils.merge(robot,pied);
  luzPuntual.position.x=0;
  luzPuntual.position.y=10;
  luzPuntual.position.z=0;
- obs=new Obstaculos();
  escena=new THREE.Scene();
  escena.add(luzPuntual,obs);
  escena.add(robot);
