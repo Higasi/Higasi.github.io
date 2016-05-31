@@ -75,7 +75,7 @@ malla=new THREE.Mesh(robot, material);
  escena.add(luzPuntual);
  escena.add(malla);
  camara=new THREE.PerspectiveCamera();
- camara.position.z=8;
+ camara.position.z=5;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -113,16 +113,16 @@ else{
 	ayuda=new THREE.CameraHelper(camara);
 	camara.position.z=50;
 }
-if(botonu==true){
+if(botonr==true){
 	camara.position.x+=10;
 }
-if(botond==true){
+if(botonl==true){
 	camara.position.x-=10;
 }
-if(botonr==true){
+if(botonu==true){
 	camara.position.y+=10;
 }
-if(botonl==true){
+if(botond==true){
 	camara.position.y-=10;
 }
 escena.add(ayuda)
