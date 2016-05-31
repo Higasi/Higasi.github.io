@@ -8,11 +8,11 @@ var light1 = new THREE.PointLight( 0xff0040, 1000, 1000 );
 			
 malla = new THREE.Mesh(forma, material);
 
-/*  var LuzPuntual = new THREE.PointLight(0XFFFFFF,300);
+//  var LuzPuntual = new THREE.PointLight(0XFFFFFF,300);
   malla.position.x=1;
     malla.position.y=1;
       malla.position.z=1;
-*/
+
 
 light1.position.x=1;
 light1.position.y=1;
