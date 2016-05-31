@@ -7,9 +7,12 @@ malla = new THREE.Mesh(forma, material);
 malla.material.transparent = true;
 malla.material.opacity=0.5;
   var LuzPuntual = new THREE.PointLight(0XFFFFFF);
-LuzPuntual.position.x =10;
-LuzPuntual.position.y =10;
-LuzPuntual.position.z =10;
+  malla.position.x=1;
+    malla.position.y=1;
+      malla.position.z=1;
+LuzPuntual.position.x =1;
+LuzPuntual.position.y =1;
+LuzPuntual.position.z =1;
 
 escena= new THREE.Scene();
 escena.add(malla);
