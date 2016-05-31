@@ -6,8 +6,14 @@ var material = new THREE.MeshNormalMaterial( );
 malla = new THREE.Mesh(forma, material);
 malla.material.transparent = true;
 malla.material.opacity=0.1;
+  var LuzPuntual = new THREE.PointLight(0XFFFFFF);
+LuzPuntual.position.x =10;
+LuzPuntual.position.y =10;
+LuzPuntual.position.z =10;
+
 escena= new THREE.Scene();
 escena.add(malla);
+escena.add(LuzPuntual); 
 
 camara= new THREE.PerspectiveCamera();
 camara.position.z=750;
