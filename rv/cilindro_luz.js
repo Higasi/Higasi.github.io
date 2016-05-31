@@ -2,27 +2,21 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (1,1,5);
-var material = new THREE.MeshLambertMaterial({opacity:0.6,transparent:true} );
+//var material = new THREE.MeshLambertMaterial({opacity:0.6,transparent:true} );
 var light1 = new THREE.PointLight( 0xFFFFFF, 20, 50 );
 			
-			
-malla = new THREE.Mesh(forma, material);
-
-//  var LuzPuntual = new THREE.PointLight(0XFFFFFF,300);
-  malla.position.x=1;
+//malla = new THREE.Mesh(forma, material);
+/*  malla.position.x=1;
     malla.position.y=1;
-      malla.position.z=1;
-
+      malla.position.z=1;*/
 
 light1.position.set(1,1,0);
 
 escena= new THREE.Scene();
 	escena.add( new THREE.AmbientLight( 0xFFFFFF ) );
-escena.add(malla);
-//escena.add(LuzPuntual); 
+//escena.add(malla);
 	
 	escena.add( light1 );
-
 camara= new THREE.PerspectiveCamera();
 camara.position.z=8;
 renderer= new THREE.WebGLRenderer();
