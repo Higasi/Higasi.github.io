@@ -43,20 +43,20 @@ function setup(){
  document.addEventListener( 'keyup', onKeyUp, false );
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
- mapa[1] ="x r           xxxxxxxxxx";
+ mapa[1] ="x r                    x";
  mapa[2] ="x                      x";
  mapa[3] ="xxxxxxxxx              x"; 
- mapa[4] ="x                r     x";
+ mapa[4] ="x                      x";
  mapa[5] ="xxxxxxxxx              x";
  mapa[6] ="x                   xxxx"; 
  mapa[7] ="x                      x";
  mapa[8] ="xxx            xxxxxxxxx";
  mapa[9] ="x                      x";
  mapa[10]="xxxxxxxxx              x"; 
- mapa[11]="x   r                  x";
+ mapa[11]="x                      x";
  mapa[12]="xxxx               xxxxx";
  mapa[13]="x                      x";
- mapa[14]="x                     mx";
+ mapa[14]="x          m           x";
  mapa[15]="xxxxxxxxxxxxxxxxxxxxxxxx";
 
  environment=new Environment();
