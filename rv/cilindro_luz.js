@@ -2,7 +2,7 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (1,1,5);
-var material = new THREE.MeshNormalMaterial({opacity:0.5,transparent:true} );
+var material = new THREE.MeshNormalMaterial({opacity:0.1,transparent:true} );
 var light1 = new THREE.PointLight( 0xff0040, 1000, 1000 );
 			
 			
