@@ -2,7 +2,7 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (100,100,500);
-var material = new THREE.NormalMaterial( );
+var material = new THREE.MeshNormalMaterial( );
 malla = new THREE.Mesh(forma, material);
 malla.material.transparent = true;
 escena= new THREE.Scene();
