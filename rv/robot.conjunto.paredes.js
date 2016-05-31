@@ -103,7 +103,7 @@ function loop(){
 }
 else{
 	camara=new THREE.PerspectiveCamera;
-	 camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
+	 camara.position.set(robo.position.x,robo.position.y,robo.position.z+20);
 }
  requestAnimationFrame(loop);
  environment.sense();
