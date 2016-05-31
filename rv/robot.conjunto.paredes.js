@@ -12,9 +12,11 @@ function Wall(size,x,y){
 Wall.prototype=new THREE.Mesh();
 
 function Goal(size,x,y){
+	var loader = new THREE.DDSLoader();
+			var map1 = loader.load( 'http://threejs.org/examples/textures/compressed/disturb_dxt1_nomip.dds' );
  THREE.ImageUtils.crossOrigin='';
- var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/compressed/disturb_dxt1_nomip.dds ');
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura}));
+
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:map1}));
  this.size=size;
  this.position.x=x;
  this.position.y=y;
