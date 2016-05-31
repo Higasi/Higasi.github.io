@@ -39,25 +39,25 @@ function setup(){
  document.addEventListener( 'keyup', onKeyUp, false );
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
- mapa[1] ="x r      xxxxxxxxxxx   x";
- mapa[2] ="x xxxxx  xxxxxxxxxxx   x";
- mapa[3] ="x        xxxxxxxxxxx   x"; 
- mapa[4] ="x xxxxxx               x";
- mapa[5] ="xxxxxxxx    xxxxxxxxxxxx";
- mapa[6] ="xxxxxxxx               x"; 
- mapa[7] ="xxxxxxxxxxxxxxxxxxxxx  x";
- mapa[8] ="xxx                    x";
- mapa[9] ="xxxxxxxxx   xxxxxxx   xx";
+ mapa[1] ="x r      xxxxxxxxxxxxxxx";
+ mapa[2] ="xxxxxxx  xxxxxxxxxxxxxxx";
+ mapa[3] ="xxxxxxx  xxxxxxxxxxxxxxx"; 
+ mapa[4] ="xxxxxxx      xxxxxxxxxxx";
+ mapa[5] ="xxxxxxxx     xxxxxxxxxxx";
+ mapa[6] ="xxxxxxxx         xxxx  x"; 
+ mapa[7] ="xxxxxxxxx  xxxx  xxxx  x";
+ mapa[8] ="xxx        xxxx        x";
+ mapa[9] ="xxxxxxxxx   xxxxxxxxxxxx";
  mapa[10]="xxxx        xxxxxxx   xx"; 
  mapa[11]="xxxx  xxxxxxxxxxxxx   xx";
- mapa[12]="xxxx  xxxxxxxxxxxxxxxxxx";
+ mapa[12]="xxxx  xxxxxxx         xx";
  mapa[13]="xxxx  xxxxxxx   xxxxxxxx";
  mapa[14]="xxxx                   x";
  mapa[15]="x     xxxxxxxxxxxxxxxxxx";
  mapa[16]="x     xxxxxxxxxxxxxxxx x";
  mapa[17]="xxx      xxxxxxxxxxxxxxx";
- mapa[18]="x                      x";
- mapa[19]="xxxxxxxxxxgxxxxxxxxxxxxx";
+ mapa[18]="x                     g";
+ mapa[19]="xxxxxxxxxxxxxxxxxxxxxxxx";
  mapa[20]="x                      x";
  mapa[21]="x                      x";
  mapa[22]="x                      x";
@@ -97,7 +97,7 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 160 / 2, 50 / - 2, 5, 200 );
-	camara.position.z=150;
+	camara.position.z=300
 }
 else{
 	camara=new THREE.PerspectiveCamera;
