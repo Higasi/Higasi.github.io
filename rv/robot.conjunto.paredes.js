@@ -77,9 +77,38 @@ function setup(){
  k=0;
 }
 
-
+function onKeyDown ( event ) {
+	event.stopPropagation();
+	switch( event.keyCode ) {
+	case 80: boton=true; break;
+	case 38: botonu=true; break;
+	case 40: botond=true; break;
+	case 37: botonl=true; break;
+	case 39: botonr=true; break;
+				}
+	}
+function onKeyUp ( event ) {
+	event.stopPropagation();
+	switch( event.keyCode ) {
+	case 80: boton=false; break;
+	case 38: botonu=false; break;
+	case 40: botond=false; break;
+	case 37: botonl=false; break;
+	case 39: botonr=false; break;
+				}
+	}
 
 function loop(){
+ if(boton==true){
+	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 160 / 2, 50 / - 2, 5, 200 );
+	camara.position.z=150;
+}
+else{
+	camara=new THREE.PerspectiveCamera;
+	 camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
+}
+
+
 
  requestAnimationFrame(loop);
  environment.sense();
@@ -88,7 +117,8 @@ function loop(){
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,k;
+
+var clock,environment,camara,renderer,idRobot,boton,k;
 setup();
 loop();
 
