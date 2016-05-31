@@ -12,11 +12,11 @@ function Wall(size,x,y){
 Wall.prototype=new THREE.Mesh();
 
 function Goal(size,x,y){
-	var loader = new THREE.DDSLoader();
-			var map1 = loader.load( 'http://threejs.org/examples/textures/compressed/disturb_dxt1_nomip.dds' );
+	var textura1  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/terrain/grasslight-thin.jpg');
+
  THREE.ImageUtils.crossOrigin='';
 
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:map1}));
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura1}));
  this.size=size;
  this.position.x=x;
  this.position.y=y;
