@@ -13,7 +13,7 @@ Wall.prototype=new THREE.Mesh();
 
 function Goal(size,x,y){
  THREE.ImageUtils.crossOrigin='';
- var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/imagenes/cuadros.jpg?raw=true');
+ var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/compressed/disturb_dxt1_nomip.dds ');
  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura}));
  this.size=size;
  this.position.x=x;
