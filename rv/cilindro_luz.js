@@ -5,6 +5,7 @@ var forma= new THREE.BoxGeometry (100,100,500);
 var material = new THREE.MeshNormalMaterial( );
 malla = new THREE.Mesh(forma, material);
 malla.material.transparent = true;
+malla.material.opacity=0.1;
 escena= new THREE.Scene();
 escena.add(malla);
 
