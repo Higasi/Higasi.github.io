@@ -2,7 +2,7 @@ function setup(){
 	var material = new THREE.MeshPhongMaterial({color: 0xD0A9F5});
 	material.transparent = true;
 	material.opacity =0;
-	malla= new THREE.Mesh(new THREE.CylinderGeometry(2,3,3),material);
+	malla= new THREE.Mesh(new THREE.CylinderGeometry(2,2,6),material);
 	
 	var pared = new THREE.Mesh(new THREE.BoxGeometry(8,12,2),new THREE.MeshBasicMaterial({color: 0x0489B1}));
 	pared.position.z = -5;
@@ -16,7 +16,7 @@ function setup(){
 	escena.add(iluminacion);
         escena.add(pared);
 	camara= new THREE.PerspectiveCamera();
-	camara.position.set(0,-4,25)
+	camara.position.set(-10,0,25)
 	renderer= new THREE.WebGLRenderer();
 	renderer.setSize(window.innerHeight*.75,window.innerHeight*.75);
 	document.body.appendChild(renderer.domElement);
