@@ -11,7 +11,7 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
-function Goal(size,x,y){
+function Meta(size,x,y){
 	var textura1  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/terrain/grasslight-thin.jpg');
 
  THREE.ImageUtils.crossOrigin='';
@@ -20,7 +20,7 @@ function Goal(size,x,y){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
- this.name="goal";
+ this.name="meta";
 }
 
 Goal.prototype=new THREE.Mesh();
@@ -33,7 +33,7 @@ Environment.prototype.setMap=function(map){
  this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
- else if(map[i][j]==='g')
+ else if(map[i][j]==='m')
  this.add(new Goal(4,-20+4*j,-20+4*i));
  }
 }
@@ -43,30 +43,22 @@ function setup(){
  document.addEventListener( 'keyup', onKeyUp, false );
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
- mapa[1] ="x                      x";
+ mapa[1] ="x r           xxxxxxxxxx";
  mapa[2] ="x                      x";
- mapa[3] ="x             r        x"; 
- mapa[4] ="x                      x";
- mapa[5] ="x                      x";
- mapa[6] ="x                   r  x"; 
+ mapa[3] ="xxxxxxxxx              x"; 
+ mapa[4] ="x                r     x";
+ mapa[5] ="xxxxxxxxx              x";
+ mapa[6] ="x                   xxxx"; 
  mapa[7] ="x                      x";
- mapa[8] ="xxx   xxxxxxxxxxxxxxxxxx";
+ mapa[8] ="xxx            xxxxxxxxx";
  mapa[9] ="x                      x";
- mapa[10]="x                      x"; 
- mapa[11]="x                      x";
- mapa[12]="xxxxxxxxxxxxxxxxx  xxxxx";
+ mapa[10]="xxxxxxxxx              x"; 
+ mapa[11]="x   r                  x";
+ mapa[12]="xxxx               xxxxx";
  mapa[13]="x                      x";
- mapa[14]="x                      x";
- mapa[15]="x      g               x";
- mapa[16]="x                      x";
- mapa[17]="x                      x";
- mapa[18]="x                      x";
- mapa[19]="xxxxxxxxx   xxxxxxxxxxxx";
- mapa[20]="x                      x";
- mapa[21]="x                      x";
- mapa[22]="x           r          x";
- mapa[23]="x                      x";
- mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
+ mapa[14]="x                     mx";
+ mapa[15]="xxxxxxxxxxxxxxxxxxxxxxxx";
+
  environment=new Environment();
  environment.setMap(mapa);
  camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
