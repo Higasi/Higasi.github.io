@@ -2,9 +2,9 @@
 function setup(){
 
 var forma= new THREE.BoxGeometry (1,1,5);
-var material = new THREE.MeshNormalMaterial( );
+var material = new THREE.MeshLambertMaterial( );
 malla = new THREE.Mesh(forma, material);
-malla.material.transparent = false;
+malla.material.transparent = true;
 malla.material.opacity=0.9;
   var LuzPuntual = new THREE.PointLight(0XFFFFFF);
 LuzPuntual.position.x =10;
