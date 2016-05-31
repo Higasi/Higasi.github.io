@@ -23,7 +23,7 @@ function Meta(size,x,y){
  this.name="meta";
 }
 
-Goal.prototype=new THREE.Mesh();
+Meta.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
  //var _offset=Math.floor(map.length/2);
@@ -34,7 +34,7 @@ Environment.prototype.setMap=function(map){
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
  else if(map[i][j]==='m')
- this.add(new Goal(4,-20+4*j,-20+4*i));
+ this.add(new Meta(4,-20+4*j,-20+4*i));
  }
 }
 
