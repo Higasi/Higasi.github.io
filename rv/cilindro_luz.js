@@ -1,7 +1,7 @@
 
 function setup(){
 
-var forma= new THREE.BoxGeometry (100,100,500);
+var forma= new THREE.BoxGeometry (1,1,5);
 var material = new THREE.MeshNormalMaterial( );
 malla = new THREE.Mesh(forma, material);
 malla.material.transparent = true;
@@ -16,7 +16,7 @@ escena.add(malla);
 escena.add(LuzPuntual); 
 
 camara= new THREE.PerspectiveCamera();
-camara.position.z=750;
+camara.position.z=10;
 renderer= new THREE.WebGLRenderer();
 renderer. setSize( window.innerHeight*.95, window.innerHeight*.95);
 document.body.appendChild( renderer.domElement);
